@@ -8,11 +8,11 @@ from subprocess import call
 import fractions
 def lcm(a,b): return abs(a * b)/fractions.gcd(a,b) if a and b else 0
 
-from options.train_options import TrainOptions
-from data.data_loader import CreateDataLoader
-from models.models import create_model
-import util.util as util
-from util.visualizer import Visualizer
+from pix2pixHD.options.train_options import TrainOptions
+from pix2pixHD.data.data_loader import CreateDataLoader
+from pix2pixHD.models.models import create_model
+import pix2pixHD.util.util as util
+from pix2pixHD.util.visualizer import Visualizer
 
 opt = TrainOptions().parse()
 iter_path = os.path.join(opt.checkpoints_dir, opt.name, 'iter.txt')
